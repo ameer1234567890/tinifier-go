@@ -1,0 +1,19 @@
+platform:
+  - x86
+  - x64
+environment:
+  matrix:
+    - GOVERSION: '1.11'
+    - GOVERSION: '1.10.4'
+    - GOVERSION: '1.9.7'
+    - GOVERSION: '1.8.7'
+install:
+  - ps: rmdir c:\go /s /q
+  - ps: appveyor DownloadFile https://storage.googleapis.com/golang/go%GOVERSION%.windows-amd64.msi
+  - ps: msiexec /i go%GOVERSION%.windows-amd64.msi /q
+  - ps: set Path=c:\go\bin;c:\gopath\bin
+  - ps: go version
+  - ps: go env
+build_script:
+  - ps: cd c:\projects\tinifier-go
+  - ps: go build
