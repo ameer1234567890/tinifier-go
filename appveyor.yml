@@ -11,6 +11,7 @@ install:
   - cmd: rmdir C:\Go /s /q
   - cmd: appveyor DownloadFile https://storage.googleapis.com/golang/go%GOVERSION%.windows-amd64.msi
   - cmd: msiexec /i go%GOVERSION%.windows-amd64.msi /q
+  - cmd: del go%GOVERSION%.windows-amd64.msi /q
   - cmd: set Path=C:\Go\bin;C:\Users\appveyor\go\bin;C:\Progra~1\Git\bin
   - cmd: go version
   - cmd: go env
