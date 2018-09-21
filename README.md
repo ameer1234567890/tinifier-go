@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ameer1234567890/tinifier-go.svg?branch=master)](https://travis-ci.org/ameer1234567890/tinifier-go)
+[![Build status](https://ci.appveyor.com/api/projects/status/2d6ss0tothtedi31?svg=true)](https://ci.appveyor.com/project/ameer1234567890/tinifier-go/branch/master)
 [![Go Report Card](https://goreportcard.com/badge/github.com/ameer1234567890/tinifier-go)](https://goreportcard.com/report/github.com/ameer1234567890/tinifier-go)
 
 #### Setup Instructions
