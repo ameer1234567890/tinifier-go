@@ -16,7 +16,7 @@ install:
   - cmd: go env
   - cmd: go get -u github.com/golang/dep/cmd/dep
 build_script:
-  - cmd: cp C:\projects\tinifier-go C:\Users\appveyor\go\src\tinifier
+  - cmd: copy C:\projects\tinifier-go C:\Users\appveyor\go\src\tinifier
   - cmd: cd C:\Users\appveyor\go\src\tinifier
   - cmd: dep ensure
   - cmd: go build
