@@ -14,8 +14,8 @@ install:
   - cmd: set Path=c:\go\bin;c:\gopath\bin
   - cmd: go version
   - cmd: go env
-  - cmd: go get -u github.com/golang/dep/cmd/dep
+  - sh: go get -u github.com/golang/dep/cmd/dep
 build_script:
-  - sh: cd c:\projects\tinifier-go
+  - cmd: cd c:\projects\tinifier-go
   - cmd: dep ensure
   - cmd: go build
