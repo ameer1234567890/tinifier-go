@@ -11,10 +11,12 @@ install:
   - cmd: rmdir c:\go /s /q
   - cmd: appveyor DownloadFile https://storage.googleapis.com/golang/go%GOVERSION%.windows-amd64.msi
   - cmd: msiexec /i go%GOVERSION%.windows-amd64.msi /q
-  - cmd: set Path=c:\go\bin;c:\gopath\bin
+  - cmd: where git
+  - cmd: set Path=c:\go\bin;c:\gopath\bin;C:\Progra~1\Git\bin
+  - cmd: where git
   - cmd: go version
   - cmd: go env
-  - sh: go get -u github.com/golang/dep/cmd/dep
+  - go get -u github.com/golang/dep/cmd/dep
 build_script:
   - cmd: cd c:\projects\tinifier-go
   - cmd: dep ensure
